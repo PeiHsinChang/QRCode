@@ -1,4 +1,3 @@
-# qrquerybygoogleapi
-
-this is my first project to make a new thing for QR Code.
-This idea is from my supervisor,she asked me to make a small thing to make QR Code at our company Apps.
+# QR Code
+little code &amp; take notes 
+這是我的第一個小檔案，就是利用google附件的API，把網址轉換成QR Code。
