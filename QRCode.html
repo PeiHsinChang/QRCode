@@ -7,6 +7,8 @@
     <title>QRCode</title>
     <!-- 載入 CSS 外部樣式 -->
     <link href="./style.css" rel="stylesheet" />
+    <link rel="icon" href="./qrcode.png" />
+    <link rel="mask-icon" href="./qrcode.svg" />
     <script>
       function checkUri() {
         url = document.getElementById("url");
@@ -25,13 +27,19 @@
   </head>
   <body>
     <div class="main">
-      <header>
-        <h1>QR Code</h1>
-        <h1>PLEASE TYPING YOUR URL</h1>
-      </header>
-      <input class="input" id="url" placeholder="在此貼上要轉換的網址" />
-      <button onclick="checkUri()">轉換</button><br />
-      <img id="goUrl" />
+      <div class="row">
+        <div class="subRow">QR Code</div>
+        <div class="subRow">PLEASE TYPING YOUR URL</div>
+      </div>
+      <div class="row">
+        <div class="subRow">
+          <input class="input" id="url" placeholder=" TYPING YOUR URL HERE" />
+          <button class="button" onclick="checkUri()">確認</button><br />
+        </div>
+        <div class="subRow img">
+          <img id="goUrl" />
+        </div>
+      </div>
     </div>
   </body>
 </html>
