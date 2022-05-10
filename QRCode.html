@@ -1,34 +1,37 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <meta charset="UTF-8">
-  <title>QR Codes</title>
-  <meta name="viewport" content="width=device-width">
-  <!-- 載入 CSS 外部樣式 -->
-  <link href="./style.css" rel="stylesheet">
-  <script>
-    function checkUri(){
-   url = document.getElementById("url");
-      if(url.value.length>0){
-        qrCode(url.value);
-      }else{
-        alert("請輸入網址");
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>QRCode</title>
+    <!-- 載入 CSS 外部樣式 -->
+    <link href="./style.css" rel="stylesheet" />
+    <script>
+      function checkUri() {
+        url = document.getElementById("url");
+        if (url.value.length > 0) {
+          qrCode(url.value);
+        } else {
+          alert("請輸入網址");
+        }
       }
-    }
-    function qrCode(url){
-      var qrcodeurl = document.getElementById('goUrl').src = "https://chart.googleapis.com/chart?chs=150x150&cht=qr&chl=" + url;
-      return qrcodeurl;
-    }       
-   </script>
-</head>
-<body>
-  <div class="main">
-    <header>
-      <h1>QR Codes</h1>
-    </header>
-     <input id= "url" placeholder="在此貼上要轉換的網址">
-     <button onclick="checkUri()" >轉換</button><br/>
-     <img id="goUrl"></div>
-  </div>
-</body>
+      function qrCode(url) {
+        var qrcodeurl = (document.getElementById("goUrl").src =
+          "https://chart.googleapis.com/chart?chs=150x150&cht=qr&chl=" + url);
+        return qrcodeurl;
+      }
+    </script>
+  </head>
+  <body>
+    <div class="main">
+      <header>
+        <h1>QR Code</h1>
+        <h1>PLEASE TYPING YOUR URL</h1>
+      </header>
+      <input class="input" id="url" placeholder="在此貼上要轉換的網址" />
+      <button onclick="checkUri()">轉換</button><br />
+      <img id="goUrl" />
+    </div>
+  </body>
 </html>
